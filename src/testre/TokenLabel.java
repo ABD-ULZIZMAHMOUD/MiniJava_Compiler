@@ -61,9 +61,9 @@ import java.util.ArrayList;
      , SYSTEM_OUT_PRINTLN = "\\bSystem\\.out\\.println\\b"
      , INTEGRAL_LITERAL = "\\b(-?)\\d+\\b"
      , FLOAT_LITERAL = "\\b\\d+\\.\\d+\\b"
-     , STRING_LITERAL = "\"\\w+\""
+     , STRING_LITERAL = "\"\\w*\""
      , ID = "\\b[a-zA-Z]\\w*\\b"
-    
+     //,ID ="[a-zA-Z\\$\\_][a-zA-Z0-9\\$\\_]*"
      , SQUOTE = "\'"
      , DQUOTE = "\""
      , COMMA = ","
@@ -170,7 +170,7 @@ import java.util.ArrayList;
      , AND_LABEL = "AND"
      , OR_LABEL = "OR";
         /////////////////////
-        
+        tokenLabels.add(new TokenLabel(STRING_LITERAL_LABEL , STRING_LITERAL));
         tokenLabels.add(new TokenLabel(IF_LABEL , IF));
         tokenLabels.add(new TokenLabel(ELSE_LABEL , ELSE));
         tokenLabels.add(new TokenLabel(WHILE_LABEL , WHILE));
@@ -189,7 +189,7 @@ import java.util.ArrayList;
         tokenLabels.add(new TokenLabel(SYSTEM_OUT_PRINTLN_LABEL , SYSTEM_OUT_PRINTLN));
         tokenLabels.add(new TokenLabel(FLOAT_LITERAL_LABEL , FLOAT_LITERAL));
         tokenLabels.add(new TokenLabel(INTEGRAL_LITERAL_LABEL , INTEGRAL_LITERAL));
-        tokenLabels.add(new TokenLabel(STRING_LITERAL_LABEL , STRING_LITERAL));
+        
         tokenLabels.add(new TokenLabel(SQUOTE_LABEL , SQUOTE));
         tokenLabels.add(new TokenLabel(DQUOTE_LABEL , DQUOTE));
         
