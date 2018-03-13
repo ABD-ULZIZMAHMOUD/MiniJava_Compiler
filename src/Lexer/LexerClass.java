@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testre;
+package Lexer;
 
 /**
  *
@@ -25,7 +25,7 @@ import javafx.print.Collation;
  *
  * @author anaconda
  */
-public class TestStringAgenstRegEX {
+public class LexerClass {
     
     private static ArrayList<TokenLabel> tokenLabels = null;
     

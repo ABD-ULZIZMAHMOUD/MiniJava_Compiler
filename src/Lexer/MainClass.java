@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testre;
+package Lexer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,14 +17,14 @@ import jdk.nashorn.internal.runtime.regexp.RegExp;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Testre {
+public class MainClass {
 
     public static void main( String args[] ) {
       // String to be scanned to find the pattern.
      // TokenLabel t =new TokenLabel("label", "token");
        // System.err.println(t.initializeTokensArray().get(2).toString());
        ArrayList<TokenLabel> output = new ArrayList<>();
-       output= TestStringAgenstRegEX.test("class class1 {\n" +
+       output= LexerClass.test("class class1 {\n" +
 "int value = 3;\n" +
 "String text = \"int x = 1\";\n" +
 "/*\n" +
